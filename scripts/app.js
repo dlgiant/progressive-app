@@ -185,7 +185,7 @@
   };
 
   app.saveSelectedCities = function() {
-	  var selectedCities = JSON.stringify(app.SelectedCities);
+	  var selectedCities = JSON.stringify(app.selectedCities);
 	  localStorage.selectedCities = selectedCities;
   };
 
@@ -297,17 +297,17 @@
 
   app.selectedCities = localStorage.selectedCities;
   if (app.selectedCities) {
-	app.selectedCities = JSON.parse(app.selectedCities);
-	app.selectedCities.forEach(function(city) {
-	  app.getForecast(city.key, city.label);
-	});
-} else {
-	app.updateForecastCard(initialWeatherForecast);
-	app.selectedCities = [
+	  app.selectedCities = JSON.parse(app.selectedCities);
+	  app.selectedCities.forEach(function(city) {
+	  	app.getForecast(city.key, city.label);
+  	  });
+  } else {
+	  app.updateForecastCard(initialWeatherForecast);
+	  app.selectedCities = [
 		{key: initialWeatherForecast.key, label: initialWeatherForecast.label}
-	];
-}
-	if ('serviceWorker' in navigator) {
+	  ];
+  }
+  	if ('serviceWorker' in navigator) {
 		navigator.serviceWorker
 			.register("./service-worker.js")
 			.then(function(){ console.log("Service Worker Registered");});
