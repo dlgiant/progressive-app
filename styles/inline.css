@@ -1,12 +1,12 @@
 /*
  * Copyright 2016 Google Inc.
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *      http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -56,13 +56,13 @@ body {
   -webkit-align-content: stretch;
       -ms-flex-line-pack: stretch;
           align-content: stretch;
-  background: #ececec; }
+  background: #43001a; }
 
 .header {
   width: 100%;
   height: 56px;
   color: #FFF;
-  background: #3F51B5;
+  background: #012321;
   position: fixed;
   font-size: 20px;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 9px 1px rgba(0, 0, 0, 0.12), 0 4px 2px -2px rgba(0, 0, 0, 0.2);
@@ -130,7 +130,7 @@ body {
           transform: translate(-50%, -50%); }
   .loader #spinner {
     box-sizing: border-box;
-    stroke: #673AB7;
+    stroke: #FFFFFF;
     stroke-width: 3px;
     -webkit-transform-origin: 50%;
             transform-origin: 50%;
@@ -192,7 +192,7 @@ body {
   -webkit-overflow-scrolling: touch; }
 
 .dialog-container {
-  background: rgba(0, 0, 0, 0.57);
+  background: rgba(240, 223, 244, 0.57);
   position: fixed;
   left: 0;
   top: 0;
@@ -209,7 +209,7 @@ body {
   pointer-events: auto; }
 
 .dialog {
-  background: #FFF;
+  background: #AAA;
   border-radius: 2px;
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.24), 0 14px 28px rgba(0, 0, 0, 0.48);
   min-width: 280px;
@@ -281,22 +281,22 @@ body {
             flex-grow: 1; }
   .weather-forecast .current .sunset:before {
     content: "Sunset: ";
-    color: #888; }
+    color: #FFF; }
   .weather-forecast .current .wind:before {
     content: "Wind: ";
-    color: #888; }
+    color: #FFF; }
   .weather-forecast .current .sunrise:before {
     content: "Sunrise: ";
-    color: #888; }
+    color: #FFF; }
   .weather-forecast .current .humidity:before {
     content: "Humidity: ";
-    color: #888; }
+    color: #FFF; }
   .weather-forecast .current .pollen:before {
     content: "Pollen Count: ";
-    color: #888; }
+    color: #FFF; }
   .weather-forecast .current .pcount:before {
     content: "Pollen ";
-    color: #888; }
+    color: #FFF; }
 
 .weather-forecast .future {
   display: -webkit-box;
@@ -317,7 +317,7 @@ body {
     .weather-forecast .future .oneday .temp-high, .weather-forecast .future .oneday .temp-low {
       display: inline-block; }
     .weather-forecast .future .oneday .temp-low {
-      color: #888; }
+      color: #FFF; }
 
 .weather-forecast .icon {
   background-repeat: no-repeat;
@@ -361,7 +361,7 @@ body {
   background: transparent;
   border: none;
   border-radius: 2px;
-  color: black;
+  color: white;
   position: relative;
   height: 36px;
   margin: 0;
