@@ -293,10 +293,8 @@
       }
     }
   };
-  // TODO uncomment line below to test app with fake data
   app.updateForecastCard(initialWeatherForecast);
 
-  // TODO add startup code here
   app.selectedCities = localStorage.selectedCities;
   if (app.selectedCities) {
 	app.selectedCities = JSON.parse(app.selectedCities);
@@ -314,6 +312,4 @@
 			.register("./service-worker.js")
 			.then(function(){ console.log("Service Worker Registered");});
 	}
-
-
 })();
