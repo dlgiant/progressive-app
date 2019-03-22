@@ -21,7 +21,6 @@ var filesToCache = [
 ];
 
 self.addEventListener("install", function(e) {
-	console.log("['ServiceWorker'] Install");
 	e.waitUntil(
 		caches.open(cacheName).then(function(cache) {
 			console.log('[Service Worker] Caching app shell');
@@ -47,8 +46,9 @@ self.addEventListener("activate", function(e) {
 
 self.addEventListener("fetch", function(e) {
 	console.log("[Service Worker] Fetch "+e.request.url);
-	var dataUrl = 'https://query.yahooapis.com/v1/public/yql';
+	var dataUrl = 'https://weather-ydn-yql.media.yahoo.com/forecastrss';
 	if (e.request.url.indexOf(dataUrl) > -1){
+		// Cache then network strategy
 		e.respondWith(
 			caches.open(dataCacheName).then(function(cache) {
 	   			return fetch(e.request).then(function(response){
@@ -58,6 +58,7 @@ self.addEventListener("fetch", function(e) {
 	 		})
 		);
 	} else {
+		// Cache failing back to the network offline strategy
 		e.respondWith(
 			caches.match(e.request).then(function(response){
 				return response || fetch(e.request);
